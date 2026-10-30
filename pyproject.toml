@@ -6,6 +6,7 @@ requires-python = ">=3.12"
 
 [dependency-groups]
 dev = [
+  "httpx>=0.28.0",
   "pytest>=8.3.0",
   "pytest-cov>=6.0.0",
   "pyright>=1.1.390",
@@ -28,3 +29,4 @@ select = ["E", "F", "I", "B", "UP", "SIM"]
 
 [tool.ruff.lint.per-file-ignores]
 "packages/fiscal-cli/src/fiscal_cli/main.py" = ["B008"]
+"packages/tributa-api/src/tributa_api/app.py" = ["B008"]
