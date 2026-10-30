@@ -1,0 +1,24 @@
+# Fonte: Guia Prático EFD-Contribuições v1.35.
+# Status: candidate. Uso exclusivo em testes até revisão do contador consultor.
+module: efd_contrib
+layout_version: '1.35'
+valid_from: 2026-01-01
+source:
+  url: https://www.gov.br/sped/pt-br/assuntos/escrituracoes-digitais/efd-contribuicoes/manuais/guia_pratico_efd_contribuicoes_versao_1_35-18_06_2021.pdf
+  reviewed: false
+records:
+  '0000':
+    block: '0'
+    parent:
+    description: Abertura do arquivo digital e identificação da pessoa jurídica.
+    fields:
+      - {n: 1, name: REG, type: str, req: O}
+      - {n: 2, name: COD_VER, type: int, req: O}
+      - {n: 3, name: TIPO_ESCRIT, type: enum, req: OC, values: ['0', '1']}
+      - {n: 4, name: IND_SIT_ESP, type: enum, req: OC, values: ['0', '1', '2', '3', '4']}
+      - {n: 5, name: NUM_REC_ANTERIOR, type: str, req: OC}
+      - {n: 6, name: DT_INI, type: date, req: O}
+      - {n: 7, name: DT_FIN, type: date, req: O}
+      - {n: 8, name: NOME, type: str, req: O}
+      - {n: 9, name: CNPJ, type: str, req: O}
+      - {n: 10, name: UF, type: str, req: O}

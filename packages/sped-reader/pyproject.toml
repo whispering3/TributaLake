@@ -1,0 +1,20 @@
+[project]
+name = "sped-reader"
+version = "0.1.0"
+description = "Leitor SPED streaming orientado por especificações declarativas."
+requires-python = ">=3.12"
+dependencies = [
+  "fiscal-model",
+  "fiscal-spec",
+  "fiscal-store",
+  "pyarrow>=18.0.0",
+]
+
+[tool.uv.sources]
+fiscal-model = { workspace = true }
+fiscal-spec = { workspace = true }
+fiscal-store = { workspace = true }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

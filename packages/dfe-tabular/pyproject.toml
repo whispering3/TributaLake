@@ -1,0 +1,19 @@
+[project]
+name = "dfe-tabular"
+version = "0.1.0"
+description = "Conversão de documentos fiscais eletrônicos em tabelas tipadas."
+requires-python = ">=3.12"
+dependencies = [
+  "fiscal-model",
+  "fiscal-store",
+  "nfelib>=3.2.0",
+  "pyarrow>=18.0.0",
+]
+
+[tool.uv.sources]
+fiscal-model = { workspace = true }
+fiscal-store = { workspace = true }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

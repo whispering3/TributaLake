@@ -1,0 +1,17 @@
+[project]
+name = "fiscal-store"
+version = "0.1.0"
+description = "Persistência Parquet e catálogo DuckDB do TributaLake."
+requires-python = ">=3.12"
+dependencies = [
+  "duckdb>=1.1.0",
+  "fiscal-model",
+  "pyarrow>=18.0.0",
+]
+
+[tool.uv.sources]
+fiscal-model = { workspace = true }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

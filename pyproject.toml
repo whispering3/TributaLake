@@ -1,0 +1,30 @@
+[project]
+name = "tributa-lake-workspace"
+version = "0.1.0"
+description = "Workspace da camada analítica fiscal brasileira."
+requires-python = ">=3.12"
+
+[dependency-groups]
+dev = [
+  "pytest>=8.3.0",
+  "pytest-cov>=6.0.0",
+  "pyright>=1.1.390",
+  "ruff>=0.8.0",
+]
+
+[tool.uv.workspace]
+members = ["packages/*"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["packages"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+
+[tool.ruff.lint.per-file-ignores]
+"packages/fiscal-cli/src/fiscal_cli/main.py" = ["B008"]

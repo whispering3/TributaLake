@@ -1,0 +1,9 @@
+[project]
+name = "fiscal-synth"
+version = "0.1.0"
+description = "Geração determinística de dados fiscais sintéticos."
+requires-python = ">=3.12"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
