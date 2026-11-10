@@ -29,7 +29,7 @@ jobs:
           python -m build --outdir dist packages/dfe-tabular &&
           python -m build --outdir dist packages/fiscal-synth &&
           python -m build --outdir dist packages/fiscal-cli
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: python-distributions
           path: dist/
